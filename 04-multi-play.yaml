@@ -1,4 +1,4 @@
--name: PLAY1
+- name: PLAY1
  hosts: local
  connection: local #managing its own node,no need creditals
  tasks:
@@ -6,8 +6,7 @@
   ansible.builtin.debug:
     msg: "Hello from PLAY1 and TASK1"
 
-
-    -name: PLAY2
+  - name: PLAY2
  hosts: local
  connection: local #managing its own node,no need creditals
  tasks:

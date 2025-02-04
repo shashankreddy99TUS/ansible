@@ -8,8 +8,6 @@
     prompt: please enter duration
   - name: TRAINER
     prompt: Please enter trainer name     
-
-  course.yaml
   tasks:
   - name: print course information
     ansible.builtin.debug:

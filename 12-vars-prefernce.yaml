@@ -11,8 +11,11 @@
     private: false
   tasks:
   - name: print the varaiable
+    vars:
+      GREET: "TASK"
     ansible.builtin.debug:
      msg: "Course is {{ COURSE }},Duration is {{DURATION}}, Trainer is {{TRAINER}}"
 
 
      #1 . Command line or args
+     #2 . Task level

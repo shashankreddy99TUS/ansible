@@ -1,4 +1,4 @@
-- name: vars
+- name: variables
   hosts: local
   connection: local
   vars:

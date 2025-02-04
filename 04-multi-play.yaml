@@ -1,6 +1,6 @@
 -name: PLAY1
  hosts: local
- connectio: local #managing its own node,no need creditals
+ connection: local #managing its own node,no need creditals
  tasks:
   -name: PLAY1 and TASK1
   ansible.builtin.debug:
@@ -9,7 +9,7 @@
 
     -name: PLAY2
  hosts: local
- connectio: local #managing its own node,no need creditals
+ connection: local #managing its own node,no need creditals
  tasks:
   -name: PLAY2 and TASK1
   ansible.builtin.debug:

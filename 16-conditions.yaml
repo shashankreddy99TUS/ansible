@@ -10,7 +10,7 @@
 
 
      - name: install nginx is Ubuntu
-    ansible.builtin.dnf:
-       name: nginx
-       state: installed
-    when: ansible_os_family == "Debian"
+       ansible.builtin.dnf:
+         name: nginx
+         state: installed
+       when: ansible_os_family == "Debian"

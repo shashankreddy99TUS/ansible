@@ -10,7 +10,7 @@
 
 
  - name: install nginx if Ubuntu
-  ansible.builtin.apt:
-    name: nginx
-    state: installed
-  when: ansible_os_family == "Debian"
+   ansible.builtin.apt:
+     name: nginx
+     state: installed
+   when: ansible_os_family == "Debian"

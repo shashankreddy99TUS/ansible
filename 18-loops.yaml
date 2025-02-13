@@ -7,7 +7,7 @@
       name: "{{ item }}"
       state: installed
     loop:
-    = gcc
+    - gcc
     - mysql
     - git
     - zip

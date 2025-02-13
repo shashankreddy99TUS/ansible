@@ -1,0 +1,13 @@
+- name: filters
+  hosts: local
+  connection: local
+  tasks:
+  - name: handle undefined variable
+    ansible.builtin.debug:
+      msg: "Hello {{ person | default('Ramesh') }}"
+
+  - name: convert string to list
+    vars:
+      fruits: "apple,banana,oranage" #string
+      ansible.builtin.debug:
+         msg: "Fruits are: {{ fruits | split(',') }}"    

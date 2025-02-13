@@ -26,7 +26,7 @@
     vars:
       course:
       - {'key': 'name', 'value': 'ansible'}    
-      - {'key': 'name', 'value': '10hrs'}  
-      -  {'key': 'name', 'value': 'sivakumar'} 
+      - {'key': 'duration', 'value': '10hrs'}  
+      - {'key': 'trainer', 'value': 'sivakumar'} 
       ansible.builtin.debug:
        msg: "Course info: {{ course | items2list }}" 

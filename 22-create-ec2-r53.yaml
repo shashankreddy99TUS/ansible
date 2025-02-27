@@ -6,6 +6,7 @@
     sg_id: sg-0b7ecc83e0d4404d9
     ami_id: ami-09c813fb71547fc4f
     instance_type: t3.micro 
+    zone: daws82s.life
     instances:
     - mysql
     - backend
@@ -36,3 +37,17 @@
     ansible.builtin.debug:
       msg: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"      
+
+
+  - name: create private ip r53 recordes
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item}}.{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+      loop: "{{ ec2_info.results }}"
+
